@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  <link href="./styles.css" rel="stylesheet">
+  <link rel="preload" href="./shrifts/Gilroy-Light.woff2" as="font" type="font/woff2" crossorigin>
+  <title>Steel</title>
+</head>
+
+<body>
+  <div class="sidebar">
+    <ul>
+      <li><a href="glavnaya.html">Главная</a></li>
+      <li><a> Проверка подключения </a></li>
+      <li><a href="about.html">О нас</a></li>
+    </ul>
+  </div>
+  <div class="content">
+    <div class="container">
+      <div class="left-pane">
+        <h1>Здравствуй, дорогой пользователь.<br> Это раздел для проверки связи с комплексом <br> Лампочки 1го регистра вашего контроллера и его значения представлены ниже</h1>
+        <p class="p_vis">Значение из 0 регистра: <span id="value1"></span></p>
+        <p>Значение из 1 регистра: <span id="value2"></span></p>
+        <div class="lamp-panel">
+          <div class="lamp-row">
+            <div class="lamp-container">
+              <div class="lamp"> <span class="lamp-number">1</span></div>
+              <input type="text" class="lamp-input" min="0" max="1">
+            </div>
+            <div class="lamp-container">
+              <div class="lamp"><span class="lamp-number">2</span></div>
+              <input type="text" class="lamp-input" min="0" max="1">
+            </div>
+            <div class="lamp-container">
+              <div class="lamp"><span class="lamp-number">3</span></div>
+              <input type="text" class="lamp-input" min="0" max="1">
+            </div>
+            <div class="lamp-container">
+              <div class="lamp"><span class="lamp-number">4</span></div>
+              <input type="text" class="lamp-input" min="0" max="1">
+            </div>
+          </div>
+          
+        
+
+        </div>
+        <div class="line_conteiner_bottom">
+          <p> Info special for programmer: Node.js <span id="node-version"></span>
+            Chromium <span id="chrome-version"></span>
+            and Electron <span id="electron-version"></span></p>
+        </div>
+      </div>
+
+      <div class="right-pane">
+        <div class="box" id="error-box">
+          <!-- Вывод сообщений здесь -->
+        </div>
+      </div>
+    </div>
+
+    <script src="./renderer.js"></script>
+</body>
+
+</html>
